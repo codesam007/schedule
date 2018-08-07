@@ -72,24 +72,24 @@ module.exports = webpackMerge(webpackCommon, {
   ],
 
   devServer: {
-   host: env.devServer.host || 'localhost',
-   port: env.devServer.port || 8080,
-   contentBase: path.resolve(__dirname, '../static'),
-   watchContentBase: true,
-   compress: true,
-   hot: true,
-   historyApiFallback: {
-     disableDotRule: true
-   },
-   watchOptions: {
-     ignored: /node_modules/
-   },
-   overlay: {
-     warnings: true,
-     errors: true
-   },
-   proxy: proxyRules,
-   allowedHosts: env.devServer.allowedHosts || []
- }
+    host: env.devServer.host || 'localhost',
+    port: env.devServer.port || 8080,
+    contentBase: path.resolve(__dirname, '../static'),
+    watchContentBase: true,
+    compress: true,
+    hot: true,
+    historyApiFallback: {
+      disableDotRule: true
+    },
+    watchOptions: {
+      ignored: /node_modules/
+    },
+    overlay: {
+      warnings: true,
+      errors: true
+    },
+    proxy: proxyRules,
+    allowedHosts: env.devServer.allowedHosts || []
+  }
 
 });
