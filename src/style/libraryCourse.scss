@@ -1,12 +1,19 @@
 .library-course{
     display: grid;
-    grid-template-columns: repeat(auto-fit, ifr);
+    grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows: 1fr 1fr;
+    background-color: cornflowerblue;
     
-    &__title{
+    &_title-arrow{
+        grid-row: 1/2;
+        display: flex;
+    }
+    
+    &_arrow{
         grid-row: 1/2;
     }
-    &__description{
+    
+    &_description{
         grid-row: 2/3;
         
     }
